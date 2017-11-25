@@ -2,14 +2,15 @@
 Imports MySql.Data.MySqlClient
 
 Public Class Login
-    Inherits System.Web.UI.Page
+    Inherits Page
 
     Public Shared connectionString As [String] = "Datasource=localhost;Database=student_database;user=root;"
     Dim mcon As New MySqlConnection(connectionString)
     Dim mcd As New MySqlCommand
     Dim mdr As MySqlDataReader
-    Dim credentials_table As String = "student_information"
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
+    Dim ReadOnly credentials_table As String = "student_information"
+
+    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
         If Session("Auth") = True Then
             Response.Redirect("~/Default.aspx")
         Else
@@ -18,7 +19,6 @@ Public Class Login
     End Sub
 
     Protected Sub TextBox2_TextChanged(sender As Object, e As EventArgs)
-
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -28,7 +28,8 @@ Public Class Login
         Else
             mcon = New MySqlConnection(connectionString)
             mcon.Open()
-            Action = "select * from " & credentials_table & " where ID='" & passwordtb.Text & "'AND username='" & usernametb.Text & "';"
+            Action = "select * from " & credentials_table & " where ID='" & passwordtb.Text & "'AND username='" &
+                     usernametb.Text & "';"
             mcd = New MySqlCommand(Action, mcon)
             mdr = mcd.ExecuteReader()
             If mdr.Read() Then
@@ -36,7 +37,9 @@ Public Class Login
                 login_result.ForeColor = Color.White
                 Session("Auth") = True
                 Session("username") = usernametb.Text
+                Session("id") = passwordtb.Text
                 Session("fullname") = mdr("first").ToString() & " " & mdr("last").ToString()
+                Session("major") = mdr("major").ToString()
                 Response.Redirect("Default.aspx")
             Else
                 login_result.Text = "The username or password is invalid."

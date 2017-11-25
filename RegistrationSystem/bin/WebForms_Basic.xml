@@ -8,34 +8,70 @@ RegistrationSystem
 <members>
 <member name="T:RegistrationSystem.My.MyWebExtension">
  <summary>
- Module used to define the properties that are available in the My Namespace for Web projects.
+     Module used to define the properties that are available in the My Namespace for Web projects.
  </summary>
  <remarks></remarks>
 </member>
 <member name="P:RegistrationSystem.My.MyWebExtension.Computer">
  <summary>
- Returns information about the host computer.
+     Returns information about the host computer.
  </summary>
 </member>
 <member name="P:RegistrationSystem.My.MyWebExtension.User">
  <summary>
- Returns information for the current Web user.
+     Returns information for the current Web user.
  </summary>
 </member>
 <member name="P:RegistrationSystem.My.MyWebExtension.Request">
  <summary>
- Returns Request object.
+     Returns Request object.
  </summary>
 </member>
 <member name="P:RegistrationSystem.My.MyWebExtension.Response">
  <summary>
- Returns Response object.
+     Returns Response object.
  </summary>
 </member>
 <member name="P:RegistrationSystem.My.MyWebExtension.Log">
  <summary>
- Returns the Asp log object.
+     Returns the Asp log object.
  </summary>
+</member>
+<member name="F:RegistrationSystem._Default._choose_courses_label">
+<summary>
+choose_courses_label control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem._Default._selected_courses_label">
+<summary>
+selected_courses_label control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem._Default._AvailableCourses_Panel">
+<summary>
+AvailableCourses_Panel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem._Default._ChosenCourses_Panel">
+<summary>
+ChosenCourses_Panel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member>
 <member name="F:RegistrationSystem.Login._TopPanel">
 <summary>
