@@ -7,13 +7,13 @@
             <tr >
                 <td >
                     <div align="center">
-                        <asp:Label ID="choose_courses_label" runat="server" Text="Choose your courses"></asp:Label>
+                        <asp:Label ID="choose_courses_label" runat="server" Text="Choose your courses" Font-Size="15pt"></asp:Label>
                     </div>
 
                 </td>
                 <td >
                     <div align="center">
-                        <asp:Label ID="selected_courses_label" runat="server" Text="Selected courses"></asp:Label>
+                        <asp:Label ID="selected_courses_label" runat="server" Text="Selected courses" Font-Size="15pt"></asp:Label>
                     </div>
                 </td>
             </tr>

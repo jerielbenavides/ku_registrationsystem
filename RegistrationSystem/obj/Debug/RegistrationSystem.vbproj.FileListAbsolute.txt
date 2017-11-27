@@ -89,12 +89,6 @@ C:\Users\jerie\Desktop\Projects2\RegistrationSystem\RegistrationSystem\obj\Debug
 C:\Users\jerie\Desktop\Projects2\RegistrationSystem\RegistrationSystem\obj\Debug\RegistrationSystem.pdb
 C:\Users\jerie\Desktop\Projects2\RegistrationSystem\RegistrationSystem\bin\MySql.Data.dll
 C:\Users\jerie\Desktop\Projects2\RegistrationSystem\RegistrationSystem\bin\MySql.Data.xml
-C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\System.IO.Compression.dll
-C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\VBCSCompiler.exe
 F:\RegistrationSystem\RegistrationSystem\bin\ApplicationInsights.config
 F:\RegistrationSystem\RegistrationSystem\bin\RegistrationSystem.dll.config
 F:\RegistrationSystem\RegistrationSystem\bin\RegistrationSystem.dll
@@ -202,9 +196,13 @@ C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\csi.exe
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\csi.exe.config
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\csi.rsp
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\Microsoft.Win32.Primitives.dll
@@ -214,6 +212,7 @@ C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\System.C
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\System.Diagnostics.Process.dll
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\System.IO.Compression.dll
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\System.IO.FileSystem.dll
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\System.IO.FileSystem.Primitives.dll
@@ -236,6 +235,7 @@ C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\System.X
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\vbc.exe
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\vbc.exe.config
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\vbc.rsp
+C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\VBCSCompiler.exe
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\Antlr3.Runtime.dll
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\AspNet.ScriptManager.bootstrap.dll
@@ -272,6 +272,7 @@ C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\Newtonsoft.Json
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\System.Web.Optimization.xml
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\obj\Debug\RegistrationSystem.vbprojResolveAssemblyReference.cache
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\obj\Debug\RegistrationSystem.Resources.resources
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\obj\Debug\RegistrationSystem.vbproj.GenerateResource.Cache
 C:\Users\jerie\Desktop\RegistrationSystem\RegistrationSystem\obj\Debug\RegistrationSystem.vbproj.CoreCompileInputs.cache

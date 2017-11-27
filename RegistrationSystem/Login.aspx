@@ -5,11 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="<%=ResolveUrl("~/Content/footer.css")%>" rel="stylesheet" type="text/css"/>
+
 </head>
-<body style="background-color: #1F67A6">
+<body style="background-color: #032e66">
 <form runat="server">
-    <asp:Panel ID="TopPanel" BackColor="#1F67A6" runat="server">
+    <asp:Panel ID="TopPanel" BackColor="#032e66" runat="server">
         <br/>
         <br/>
 
@@ -48,6 +48,5 @@
         <br/>
     </asp:Panel>
 </form>
-<div id="Footer">Version 1.0</div>
 </body>
 </html>

@@ -75,19 +75,19 @@ Public Class _Default
         Dim offset = 10
         choose_courses_label.ForeColor = Color.White
         selected_courses_label.ForeColor = Color.White
-        ChosenCourses_Panel.BorderColor = Color.Black
+        ChosenCourses_Panel.BorderColor = Color.White
         ChosenCourses_Panel.BorderWidth = 5
-        ChosenCourses_Panel.BackColor = Color.FromArgb(31, 103, 166)
-        AvailableCourses_Panel.BorderColor = Color.Black
+        ChosenCourses_Panel.BackColor = Color.FromArgb(3, 46, 102)
+        AvailableCourses_Panel.BorderColor = Color.White
         AvailableCourses_Panel.BorderWidth = 5
-        AvailableCourses_Panel.BackColor = Color.FromArgb(31, 103, 166)
+        AvailableCourses_Panel.BackColor = Color.FromArgb(3, 46, 102)
         For Each _class As Class_Object In classes
 
             Dim checkBox = New CheckBox()
             checkBox.BorderWidth = 5
             checkBox.AutoPostBack = True
             checkBox.Text = " Code: " & _class.get_coursecode()
-            checkBox.BorderColor = Color.FromArgb(31, 103, 166)
+            checkBox.BorderColor = Color.FromArgb(3, 46, 102)
             checkBox.ForeColor = Color.White
             checkBox.Checked = False
             checkBox.ID = classes.IndexOf(_class) & _class.get_coursecode()
@@ -97,42 +97,47 @@ Public Class _Default
             offset = offset + 30
 
             Dim pan_classname As New Panel
-            pan_classname.BackColor = Color.Azure
+            pan_classname.BackColor = Color.FromArgb(3, 46, 102)
             Dim classname As New Label With {
                     .Text = _class.get_coursename()
                     }
+
+            classname.ForeColor = Color.White
             pan_classname.Controls.Add(classname)
 
             Dim pan_instructor As New Panel
-            pan_instructor.BackColor = Color.Azure
+            pan_instructor.BackColor = Color.FromArgb(3, 46, 102)
             Dim classinstructor As New Label With {
                     .Text = "Instructor: " & _class.get_instructor()
                     }
+            classinstructor.ForeColor = Color.White
             pan_instructor.Controls.Add(classinstructor)
 
             Dim pan_classloc As New Panel
-            pan_classloc.BackColor = Color.Azure
+            pan_classloc.BackColor = Color.FromArgb(3, 46, 102)
 
             Dim classloc As New Label With {
                     .Text =
                     "Days: " & _class.get_days() & vbTab & vbTab & "   ///   Time: " & _class.get_timein() & " - " &
                     _class.get_timeout() & vbTab & vbTab & "   ///   Room: " & _class.get_room()
                     }
+            classloc.ForeColor = Color.White
             pan_classloc.Controls.Add(classloc)
 
 
             Dim separator As New Panel
-            separator.BackColor = Color.FromArgb(31, 103, 166)
+            separator.BackColor = Color.FromArgb(3, 46, 102)
             separator.Height = 15
             separator.Width = 400
 
             Dim class_panel As New Panel
             class_panel.BorderWidth = 5
-            class_panel.BorderColor = Color.FromArgb(31, 103, 166)
+            class_panel.BorderColor = Color.FromArgb(3, 46, 102)
+            class_panel.BackColor = Color.FromArgb(3, 46, 102)
 
             Dim superclass_panel As New Panel
             superclass_panel.BorderWidth = 5
-            superclass_panel.BorderColor = Color.FromArgb(31, 103, 166)
+            superclass_panel.BorderColor = Color.FromArgb(3, 46, 102)
 
             class_panel.Controls.Add(pan_classname)
             class_panel.Controls.Add(pan_instructor)
@@ -144,6 +149,7 @@ Public Class _Default
             AvailableCourses_Panel.Controls.Add(superclass_panel)
         Next
         ChosenCourses_Panel.Width = AvailableCourses_Panel.Width
+        show_right_panel()
     End Sub
 
     Private Function handle_checkbox(_class As Class_Object, isChecked As Boolean, checkbox As CheckBox) As EventHandler
@@ -184,42 +190,45 @@ end_of_for:
 
         If same_course = False And schedule_problem = False And credits_problem = False Then
             Dim pan_classname As New Panel
-            pan_classname.BackColor = Color.Azure
+            pan_classname.BackColor = Color.FromArgb(3, 46, 102)
             Dim classname As New Label With {
                     .Text = _class.get_coursename()
                     }
+            classname.ForeColor = Color.White
             pan_classname.Controls.Add(classname)
 
             Dim pan_instructor As New Panel
-            pan_instructor.BackColor = Color.Azure
+            pan_instructor.BackColor = Color.FromArgb(3, 46, 102)
             Dim classinstructor As New Label With {
                     .Text = "Instructor: " & _class.get_instructor()
                     }
+            classinstructor.ForeColor = Color.White
             pan_instructor.Controls.Add(classinstructor)
 
             Dim pan_classloc As New Panel
-            pan_classloc.BackColor = Color.Azure
+            pan_classloc.BackColor = Color.FromArgb(3, 46, 102)
 
             Dim classloc As New Label With {
                     .Text =
                     "Days: " & _class.get_days() & vbTab & vbTab & "   ///   Time: " & _class.get_timein() & " - " &
                     _class.get_timeout() & vbTab & vbTab & "   ///   Room: " & _class.get_room()
                     }
+            classloc.ForeColor = Color.White
             pan_classloc.Controls.Add(classloc)
 
 
             Dim separator As New Panel
-            separator.BackColor = Color.FromArgb(31, 103, 166)
+            separator.BackColor = Color.FromArgb(3, 46, 102)
             separator.Height = 15
             separator.Width = 400
 
             Dim class_panel As New Panel
             class_panel.BorderWidth = 5
-            class_panel.BorderColor = Color.FromArgb(31, 103, 166)
+            class_panel.BorderColor = Color.FromArgb(3, 46, 102)
 
             Dim superclass_panel As New Panel
             superclass_panel.BorderWidth = 5
-            superclass_panel.BorderColor = Color.FromArgb(31, 103, 166)
+            superclass_panel.BorderColor = Color.FromArgb(3, 46, 102)
 
             class_panel.Controls.Add(pan_classname)
             class_panel.Controls.Add(pan_instructor)
@@ -260,21 +269,23 @@ end_of_for:
         For value = 0 To (strings_for_panels.Count - 11) Step 11
 
             Dim pan_classname As New Panel
-            pan_classname.BackColor = Color.Azure
+            pan_classname.BackColor = Color.FromArgb(3, 46, 102)
             Dim classname As New Label With {
                     .Text = strings_for_panels(value + 1).ToString()
                     }
+            classname.ForeColor = Color.White
             pan_classname.Controls.Add(classname)
 
             Dim pan_instructor As New Panel
-            pan_instructor.BackColor = Color.Azure
+            pan_instructor.BackColor = Color.FromArgb(3, 46, 102)
             Dim classinstructor As New Label With {
                     .Text = "Instructor: " & strings_for_panels(value + 5).ToString()
                     }
+            classinstructor.ForeColor = Color.White
             pan_instructor.Controls.Add(classinstructor)
 
             Dim pan_classloc As New Panel
-            pan_classloc.BackColor = Color.Azure
+            pan_classloc.BackColor = Color.FromArgb(3, 46, 102)
 
             Dim classloc As New Label With {
                     .Text =
@@ -282,20 +293,21 @@ end_of_for:
                     strings_for_panels(value + 8).ToString() & " - " & strings_for_panels(value + 9).ToString() & vbTab &
                     vbTab & "   ///   Room: " & strings_for_panels(value + 7).ToString()
                     }
+            classloc.ForeColor = Color.White
             pan_classloc.Controls.Add(classloc)
 
             Dim separator As New Panel
-            separator.BackColor = Color.FromArgb(31, 103, 166)
+            separator.BackColor = Color.FromArgb(3, 46, 102)
             separator.Height = 15
             separator.Width = 400
 
             Dim class_panel As New Panel
             class_panel.BorderWidth = 5
-            class_panel.BorderColor = Color.FromArgb(31, 103, 166)
+            class_panel.BorderColor = Color.FromArgb(3, 46, 102)
 
             Dim superclass_panel As New Panel
             superclass_panel.BorderWidth = 5
-            superclass_panel.BorderColor = Color.FromArgb(31, 103, 166)
+            superclass_panel.BorderColor = Color.FromArgb(3, 46, 102)
 
             class_panel.Controls.Add(pan_classname)
             class_panel.Controls.Add(pan_instructor)
@@ -307,6 +319,17 @@ end_of_for:
             ChosenCourses_Panel.Controls.Add(superclass_panel)
             ChosenCourses_Panel.ViewStateMode = ViewStateMode.Enabled
         Next
+        show_right_panel()
+    End Sub
+
+    Private Sub show_right_panel()
+        If (strings_for_panels.Count < 1) Then
+            ChosenCourses_Panel.Visible = False
+            selected_courses_label.Visible = False
+        Else
+            ChosenCourses_Panel.Visible = True
+            selected_courses_label.Visible = True
+        End If
     End Sub
 
 #End Region

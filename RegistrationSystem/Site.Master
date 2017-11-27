@@ -16,7 +16,7 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 
 </head>
-<body style="background-color: #1F67A6">
+<body style="background-color: #032e66">
 <form runat="server">
     <asp:ScriptManager runat="server">
         <Scripts>
@@ -70,12 +70,12 @@
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div id="FooterDiv" class="container body-content">
         <asp:ContentPlaceHolder ID="MainContent" runat="server">
         </asp:ContentPlaceHolder>
         <hr/>
-        <footer>
-            <p>&copy; <%:DateTime.Now.Year%> - KULAC Registration System</p>
+        <footer id="Footer">
+            <asp:Label ID="FooterLabel" BackColor="#032e66" runat="server" Text="<%#DateTime.Now.Year%> - KULAC Registration System"></asp:Label>
         </footer>
     </div>
 

@@ -2,6 +2,6 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%:Title%>.</h2>
-    <p>Your app description page.</p>
-    <p>Use this area to provide additional information.</p>
+    <asp:Label ID="About1" runat="server" Text="KULAC Registration System" ForeColor="white"></asp:Label>
+    <p></p>
 </asp:Content>
