@@ -46,6 +46,141 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:RegistrationSystem.Contact._AddStudent">
+<summary>
+AddStudent control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._ID_lb">
+<summary>
+ID_lb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._Username_lb">
+<summary>
+Username_lb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._First_lb">
+<summary>
+First_lb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._Middle_lb">
+<summary>
+Middle_lb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._Last_lb">
+<summary>
+Last_lb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._Address_lb">
+<summary>
+Address_lb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._Phone_lb">
+<summary>
+Phone_lb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._Country_tb">
+<summary>
+Country_tb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._City_tb">
+<summary>
+City_tb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._State_lb">
+<summary>
+State_lb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._ZIP_lb">
+<summary>
+ZIP_lb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._BD_lb">
+<summary>
+BD_lb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._Major_lb">
+<summary>
+Major_lb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._AddStudent_bttn">
+<summary>
+AddStudent_bttn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:RegistrationSystem._Default._choose_courses_label">
 <summary>
 choose_courses_label control.
