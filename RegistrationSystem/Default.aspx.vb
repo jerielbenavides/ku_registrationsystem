@@ -507,6 +507,10 @@ end_of_for:
             html.Append("</table>")
 
             'Append the HTML string to Placeholder.
+            Dim header_string As String = "<div id='Schedule_div' align='center'> <p> Keiser University </p> <p> Spring 2018 Schedule </p> <br> </div>"
+            PlaceHolder1.Controls.Add(New Literal() With {
+                                         .Text = header_string.ToString()
+                                         })
             PlaceHolder1.Controls.Add(New Literal() With {
                                          .Text = html.ToString()
                                          })

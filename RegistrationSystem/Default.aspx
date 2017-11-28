@@ -44,6 +44,7 @@
     <div >
     </div>
     <div align="center">
+        <p></p>
         <asp:Button ID="Printbttn" BorderWidth="2px"  runat="server" Text="Print Schedule" ForeColor="white" BackColor="#032e66" OnClick="Printbttn_OnClick" />
     </div>
     <div align="center">
