@@ -5,17 +5,26 @@
         <table >
             <tbody>
             <tr >
-                <td >
+                <td style="height: 50px" >
                     <div align="center">
                         <asp:Label ID="choose_courses_label" runat="server" Text="Choose your courses" Font-Size="15pt"></asp:Label>
                     </div>
 
                 </td>
-                <td >
+                <td style="height: 50px" >
                     <div align="center">
                         <asp:Label ID="selected_courses_label" runat="server" Text="Selected courses" Font-Size="15pt"></asp:Label>
                     </div>
                 </td>
+            </tr>
+            <tr >
+                <td colspan="2">
+                    <div align="center">
+                        <asp:Label ID="MessageLabel" runat="server" align="center" Text="Label"></asp:Label>
+                    </div>
+                
+                </td>
+                <td>&nbsp;</td>
             </tr>
             <tr >
                 <td >
@@ -32,5 +41,15 @@
         </table>
 
     </div>
+    <div >
+    </div>
+    <div align="center">
+        <asp:Button ID="Printbttn" BorderWidth="2px"  runat="server" Text="Print Schedule" ForeColor="white" BackColor="#032e66" OnClick="Printbttn_OnClick" />
+    </div>
+    <div align="center">
+        <asp:PlaceHolder ID = "PlaceHolder1" runat="server" />
+    </div>
+    
+
 
 </asp:Content>

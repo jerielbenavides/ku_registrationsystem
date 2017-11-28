@@ -1,8 +1,13 @@
 ﻿Imports System.Drawing
+Imports System.IO
 Imports MySql.Data.MySqlClient
+Imports iTextSharp.text
+Imports iTextSharp.text.html.simpleparser
+Imports iTextSharp.text.pdf
+
 
 Public Class _Default
-    Inherits Page
+    Inherits UI.Page
 
 #Region "Variables"
 
@@ -31,6 +36,7 @@ Public Class _Default
 
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
         'Get values
+        MessageLabel.Visible = False
         Get_Values()
         If Session("Auth") = True Then
             temporary_table1 = "relevant_courses_for_" & Session("id")
@@ -83,7 +89,7 @@ Public Class _Default
         AvailableCourses_Panel.BackColor = Color.FromArgb(3, 46, 102)
         For Each _class As Class_Object In classes
 
-            Dim checkBox = New CheckBox()
+            Dim checkBox = New WebControls.CheckBox()
             checkBox.BorderWidth = 5
             checkBox.AutoPostBack = True
             checkBox.Text = " Code: " & _class.get_coursecode()
@@ -152,7 +158,7 @@ Public Class _Default
         show_right_panel()
     End Sub
 
-    Private Function handle_checkbox(_class As Class_Object, isChecked As Boolean, checkbox As CheckBox) As EventHandler
+    Private Function handle_checkbox(_class As Class_Object, isChecked As Boolean, checkbox As WebControls.CheckBox) As EventHandler
         'A string to identify the course in the array
         Dim arrayidentify As String = _class.get_coursecode() & _class.get_days() & _class.get_timein() &
                                       _class.get_timeout()
@@ -176,7 +182,7 @@ end_of_for:
         redraw_rightpanel()
     End Function
 
-    Private Sub add_course_to_list(_class As Class_Object, string_id As String, checkbox As CheckBox)
+    Private Sub add_course_to_list(_class As Class_Object, string_id As String, checkbox As WebControls.CheckBox)
         'Boolean to check if the user already selected a similar class
         Dim same_course = False
         'Boolean to check if a class cannot be added because of the schedule
@@ -259,7 +265,8 @@ end_of_for:
 
             checkbox.Checked = False
             'Display error message
-            Response.Write("<script>alert('" & Helper.error_message & "');</script>")
+            Alert_.BootstrapAlert(MessageLabel, Helper.error_message,
+                           Alert_.BootstrapAlertType.Warning, True)
             'Remember to save the array
         End If
     End Sub
@@ -343,7 +350,7 @@ end_of_for:
         Dim mcd As New MySqlCommand(Query, mcon)
         Dim MyAdapter As New MySqlDataAdapter()
         MyAdapter.SelectCommand = mcd
-        Dim dTable As New DataTable()
+        Dim dTable As New Data.DataTable()
         MyAdapter.Fill(dTable)
 
         For Each row As DataRow In dTable.Rows
@@ -458,4 +465,92 @@ end_of_for:
     End Sub
 
 #End Region
+
+    Protected Sub Printbttn_OnClick(sender As Object, e As EventArgs)
+        Dim list_of_courses As New List(Of Class_Object)
+
+        If strings_for_panels.Count = 0 Then
+
+        Else
+            list_of_courses = Helper.get_list_of_selected_courses(strings_for_panels, classes)
+            Dim dtable As New Data.DataTable("table_courses")
+            dtable = ConvertToDataTable(list_of_courses)
+
+
+            'Building an HTML string.
+            Dim html As New StringBuilder()
+
+            'Table start.
+            html.Append("<table border = '1'>")
+
+            'Building the Header row.
+            html.Append("<tr>")
+            For Each column As DataColumn In dtable.Columns
+                html.Append("<th>")
+                html.Append(column.ColumnName)
+                html.Append("</th>")
+            Next
+            html.Append("</tr>")
+
+            'Building the Data rows.
+            For Each row As DataRow In dtable.Rows
+                html.Append("<tr>")
+                For Each column As DataColumn In dtable.Columns
+                    html.Append("<td>")
+                    html.Append(row(column.ColumnName))
+                    html.Append("</td>")
+                Next
+                html.Append("</tr>")
+            Next
+
+            'Table end.
+            html.Append("</table>")
+
+            'Append the HTML string to Placeholder.
+            PlaceHolder1.Controls.Add(New Literal() With {
+                                         .Text = html.ToString()
+                                         })
+            PlaceHolder1.Visible = True
+            Print_PDF()
+            PlaceHolder1.Visible = False
+        End If
+    End Sub
+
+    Private Sub Print_PDF()
+        Response.ContentType = "application/pdf"
+        Response.AddHeader("content-disposition", "attachment;filename=" & Session("Username") & " Schedule.pdf")
+        Response.Cache.SetCacheability(HttpCacheability.NoCache)
+        Dim sw As New StringWriter()
+        Dim hw As New HtmlTextWriter(sw)
+        PlaceHolder1.RenderControl(hw)
+        Dim sr As New StringReader(sw.ToString())
+        Dim pdfDoc As New iTextSharp.text.Document(PageSize.A4.Rotate(), 10.0F, 10.0F, 100.0F, 0.0F)
+        Dim htmlparser As New HTMLWorker(pdfDoc)
+        PdfWriter.GetInstance(pdfDoc, Response.OutputStream)
+        pdfDoc.Open()
+        htmlparser.Parse(sr)
+        pdfDoc.Close()
+        Response.Write(pdfDoc)
+        Response.End()
+    End Sub
+
+
+
+    Private Function ConvertToDataTable(list_of_courses As List(Of Class_Object)) As Data.DataTable
+
+        Dim table As New Data.DataTable()
+        table.Columns.Add("Course")
+        table.Columns.Add("Code")
+        table.Columns.Add("Credits")
+        table.Columns.Add("Instructor")
+        table.Columns.Add("Time In")
+        table.Columns.Add("Time Out")
+        table.Columns.Add("Days")
+        table.Columns.Add("Room")
+        table.Columns.Add("Delivery")
+        For Each item In list_of_courses
+            table.Rows.Add(item.get_coursename(), item.get_coursecode(), item.get_credits(), item.get_instructor(), item.get_timein(), item.get_timeout(), item.get_days(), item.get_room(), item.get_mode())
+        Next
+        Return table
+    End Function
 End Class

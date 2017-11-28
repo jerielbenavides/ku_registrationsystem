@@ -69,7 +69,7 @@ end_of_for:
         Return courses_sameday
     End Function
 
-    Private Shared Function get_list_of_selected_courses(stringsForPanels As List(Of String),
+    Public Shared Function get_list_of_selected_courses(stringsForPanels As List(Of String),
                                                          _list As List(Of Class_Object)) As IEnumerable
         Dim list_classes As New List(Of Class_Object)
         For value = 0 To (stringsForPanels.Count - 11) Step 11

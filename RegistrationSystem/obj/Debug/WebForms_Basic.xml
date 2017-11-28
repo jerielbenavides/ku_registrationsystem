@@ -64,6 +64,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:RegistrationSystem._Default._MessageLabel">
+<summary>
+MessageLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:RegistrationSystem._Default._AvailableCourses_Panel">
 <summary>
 AvailableCourses_Panel control.
@@ -76,6 +85,24 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:RegistrationSystem._Default._ChosenCourses_Panel">
 <summary>
 ChosenCourses_Panel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem._Default._Printbttn">
+<summary>
+Printbttn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem._Default._PlaceHolder1">
+<summary>
+PlaceHolder1 control.
 </summary>
 <remarks>
 Auto-generated field.

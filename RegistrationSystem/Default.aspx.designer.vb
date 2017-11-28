@@ -32,6 +32,15 @@ Partial Public Class _Default
     Protected WithEvents selected_courses_label As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''MessageLabel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents MessageLabel As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''AvailableCourses_Panel control.
     '''</summary>
     '''<remarks>
@@ -48,4 +57,22 @@ Partial Public Class _Default
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ChosenCourses_Panel As Global.System.Web.UI.WebControls.Panel
+    
+    '''<summary>
+    '''Printbttn control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Printbttn As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''PlaceHolder1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents PlaceHolder1 As Global.System.Web.UI.WebControls.PlaceHolder
 End Class
