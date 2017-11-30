@@ -64,9 +64,36 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:RegistrationSystem.Contact._id_tb">
+<summary>
+id_tb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._id_tb_FilteredTextBoxExtender">
+<summary>
+id_tb_FilteredTextBoxExtender control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:RegistrationSystem.Contact._Username_lb">
 <summary>
 Username_lb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._username_tb">
+<summary>
+username_tb control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -82,9 +109,27 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:RegistrationSystem.Contact._first_tb">
+<summary>
+first_tb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:RegistrationSystem.Contact._Middle_lb">
 <summary>
 Middle_lb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._middle_tb">
+<summary>
+middle_tb control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -100,9 +145,27 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:RegistrationSystem.Contact._last_tb">
+<summary>
+last_tb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:RegistrationSystem.Contact._Address_lb">
 <summary>
 Address_lb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._address_tb">
+<summary>
+address_tb control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -118,18 +181,54 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:RegistrationSystem.Contact._Country_tb">
+<member name="F:RegistrationSystem.Contact._phone_tb">
 <summary>
-Country_tb control.
+phone_tb control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:RegistrationSystem.Contact._City_tb">
+<member name="F:RegistrationSystem.Contact._FilteredTextBoxExtender2">
 <summary>
-City_tb control.
+FilteredTextBoxExtender2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._country_lb">
+<summary>
+country_lb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._country_tb">
+<summary>
+country_tb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._City_lb">
+<summary>
+City_lb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._city_tb">
+<summary>
+city_tb control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -145,9 +244,36 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:RegistrationSystem.Contact._state_tb">
+<summary>
+state_tb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:RegistrationSystem.Contact._ZIP_lb">
 <summary>
 ZIP_lb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._ZIP_tb">
+<summary>
+ZIP_tb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._FilteredTextBoxExtender3">
+<summary>
+FilteredTextBoxExtender3 control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -163,9 +289,36 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:RegistrationSystem.Contact._BirthDate_tb">
+<summary>
+BirthDate_tb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._CalendarExtender1">
+<summary>
+CalendarExtender1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:RegistrationSystem.Contact._Major_lb">
 <summary>
 Major_lb control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._major_tb">
+<summary>
+major_tb control.
 </summary>
 <remarks>
 Auto-generated field.

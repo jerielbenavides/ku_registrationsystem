@@ -32,6 +32,24 @@ Partial Public Class Contact
     Protected WithEvents ID_lb As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''id_tb control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents id_tb As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''id_tb_FilteredTextBoxExtender control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents id_tb_FilteredTextBoxExtender As Global.AjaxControlToolkit.FilteredTextBoxExtender
+    
+    '''<summary>
     '''Username_lb control.
     '''</summary>
     '''<remarks>
@@ -39,6 +57,15 @@ Partial Public Class Contact
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Username_lb As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''username_tb control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents username_tb As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''First_lb control.
@@ -50,6 +77,15 @@ Partial Public Class Contact
     Protected WithEvents First_lb As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''first_tb control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents first_tb As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
     '''Middle_lb control.
     '''</summary>
     '''<remarks>
@@ -57,6 +93,15 @@ Partial Public Class Contact
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Middle_lb As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''middle_tb control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents middle_tb As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Last_lb control.
@@ -68,6 +113,15 @@ Partial Public Class Contact
     Protected WithEvents Last_lb As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''last_tb control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents last_tb As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
     '''Address_lb control.
     '''</summary>
     '''<remarks>
@@ -75,6 +129,15 @@ Partial Public Class Contact
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Address_lb As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''address_tb control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents address_tb As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Phone_lb control.
@@ -86,22 +149,58 @@ Partial Public Class Contact
     Protected WithEvents Phone_lb As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Country_tb control.
+    '''phone_tb control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Country_tb As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents phone_tb As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''City_tb control.
+    '''FilteredTextBoxExtender2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents City_tb As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents FilteredTextBoxExtender2 As Global.AjaxControlToolkit.FilteredTextBoxExtender
+    
+    '''<summary>
+    '''country_lb control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents country_lb As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''country_tb control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents country_tb As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''City_lb control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents City_lb As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''city_tb control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents city_tb As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''State_lb control.
@@ -113,6 +212,15 @@ Partial Public Class Contact
     Protected WithEvents State_lb As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''state_tb control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents state_tb As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
     '''ZIP_lb control.
     '''</summary>
     '''<remarks>
@@ -120,6 +228,24 @@ Partial Public Class Contact
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ZIP_lb As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''ZIP_tb control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ZIP_tb As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''FilteredTextBoxExtender3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents FilteredTextBoxExtender3 As Global.AjaxControlToolkit.FilteredTextBoxExtender
     
     '''<summary>
     '''BD_lb control.
@@ -131,6 +257,24 @@ Partial Public Class Contact
     Protected WithEvents BD_lb As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''BirthDate_tb control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents BirthDate_tb As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''CalendarExtender1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents CalendarExtender1 As Global.AjaxControlToolkit.CalendarExtender
+    
+    '''<summary>
     '''Major_lb control.
     '''</summary>
     '''<remarks>
@@ -138,6 +282,15 @@ Partial Public Class Contact
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Major_lb As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''major_tb control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents major_tb As Global.AjaxControlToolkit.ComboBox
     
     '''<summary>
     '''AddStudent_bttn control.
