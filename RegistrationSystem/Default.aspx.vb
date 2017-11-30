@@ -39,11 +39,15 @@ Public Class _Default
         MessageLabel.Visible = False
         Get_Values()
         If Session("Auth") = True Then
-            temporary_table1 = "relevant_courses_for_" & Session("id")
-            final_table = "final_" & temporary_table1
-            student_major = Session("major")
-            student_major_courses_table = "courses_" & Session("id") & "_" & student_major
-            process_courses()
+            If Session("isAdmin") = True Then
+                Response.Redirect("~/Admin.aspx")
+            Else
+                temporary_table1 = "relevant_courses_for_" & Session("id")
+                final_table = "final_" & temporary_table1
+                student_major = Session("major")
+                student_major_courses_table = "courses_" & Session("id") & "_" & student_major
+                process_courses()
+            End If
         Else
             Response.Redirect("~/Login.aspx")
         End If

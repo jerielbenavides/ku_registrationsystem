@@ -33,6 +33,7 @@ Public Class Login
             mcd = New MySqlCommand(Action, mcon)
             mdr = mcd.ExecuteReader()
             If mdr.Read() Then
+                Session("isAdmin") = False
                 login_result.Text = "Please wait..."
                 login_result.ForeColor = Color.White
                 Session("Auth") = True
@@ -40,6 +41,9 @@ Public Class Login
                 Session("id") = passwordtb.Text
                 Session("fullname") = mdr("first").ToString() & " " & mdr("last").ToString()
                 Session("major") = mdr("major").ToString()
+                If mdr("isAdmin") = True Then
+                    Session("isAdmin") = True
+                End If
                 Response.Redirect("Default.aspx")
             Else
                 login_result.Text = "The username or password is invalid."

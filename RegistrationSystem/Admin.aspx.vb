@@ -10,12 +10,17 @@ Public Class Contact
     ReadOnly credentials_table As String = "student_information"
 
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Try
-            mcon = New MySqlConnection("Datasource=localhost;Database=student_database;user=root;")
-        Catch x As Exception
-            ScriptManager.RegisterClientScriptBlock(Me, Me.GetType(), "alertMessage", "alert('Something went wrong with the connection')", True)
-            Throw
-        End Try
+        If Session("isAdmin") = True Then
+            Try
+                mcon = New MySqlConnection("Datasource=localhost;Database=student_database;user=root;")
+            Catch x As Exception
+                ScriptManager.RegisterClientScriptBlock(Me, Me.GetType(), "alertMessage", "alert('Something went wrong with the connection')", True)
+                Throw
+            End Try
+        Else
+            Response.Redirect("~/Login.aspx")
+        End If
+
     End Sub
 
     Protected Sub AddStudent_bttn_OnClick(sender As Object, e As EventArgs)
@@ -49,6 +54,7 @@ Public Class Contact
                     End If
                     mcon.Close()
                     Add_Tables()
+                    Clear_Controls()
                 Catch x As Exception
                     Alert_.BootstrapAlert(MessageLabel, x.ToString(),
                                           Alert_.BootstrapAlertType.Success, True)
@@ -60,6 +66,21 @@ Public Class Contact
         End If
     End Sub
 
+    Private Sub Clear_Controls()
+        id_tb.Text = ""
+        username_tb.Text = ""
+        first_tb.Text = ""
+        middle_tb.Text = ""
+        last_tb.Text = ""
+        address_tb.Text = ""
+        phone_tb.Text = ""
+        country_tb.Text = ""
+        city_tb.Text = ""
+        state_tb.Text = ""
+        ZIP_tb.Text = ""
+        major_tb.SelectedIndex = 0
+    End Sub
+
     Private Sub Add_Tables()
         'Stuff goes here
         mcon.Open()
@@ -68,11 +89,11 @@ Public Class Contact
         mcd = New MySqlCommand(action, mcon)
         mdr = mcd.ExecuteReader()
         mcon.Close()
-            mcon.Open()
-            'INSERT INTO `courses_6055411_bachelor of science in software engineering` (coursecode, coursename) SELECT coursecode, coursename FROM `bachelor of science in software engineering`
-            Dim query As String = "INSERT INTO `courses_" & id_tb.Text & "_" & major_tb.Text & "` (coursecode) SELECT coursecode FROM `" & major_tb.Text & "`"
-            mcd = New MySqlCommand(query, mcon)
-            Dim MyReader2 As MySqlDataReader
+        mcon.Open()
+        'INSERT INTO `courses_6055411_bachelor of science in software engineering` (coursecode, coursename) SELECT coursecode, coursename FROM `bachelor of science in software engineering`
+        Dim query As String = "INSERT INTO `courses_" & id_tb.Text & "_" & major_tb.Text & "` (coursecode) SELECT coursecode FROM `" & major_tb.Text & "`"
+        mcd = New MySqlCommand(query, mcon)
+        Dim MyReader2 As MySqlDataReader
         MyReader2 = mcd.ExecuteReader()
         Alert_.BootstrapAlert(MessageLabel, "Student Added",
                                       Alert_.BootstrapAlertType.Success, True)
