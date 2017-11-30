@@ -55,6 +55,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:RegistrationSystem.Contact._MessageLabel">
+<summary>
+MessageLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:RegistrationSystem.Contact._ID_lb">
 <summary>
 ID_lb control.

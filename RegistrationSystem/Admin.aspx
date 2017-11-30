@@ -7,6 +7,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
         <div>
             <asp:Label ID="AddStudent" runat="server" Text="Add Student" ForeColor="White" Font-Size="15pt"></asp:Label>
+            <asp:Label ID="MessageLabel" runat="server" Text="" ForeColor="Black" BackColor="white" Font-Size="15pt"></asp:Label>
             <table style="width: 100%;" >
                 <tr>
                     <td style="width: 250px"> <asp:Label ID="ID_lb" runat="server" Text="ID" ForeColor="White" Font-Size="10pt"></asp:Label> </td>

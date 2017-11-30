@@ -23,6 +23,15 @@ Partial Public Class Contact
     Protected WithEvents AddStudent As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''MessageLabel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents MessageLabel As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''ID_lb control.
     '''</summary>
     '''<remarks>
