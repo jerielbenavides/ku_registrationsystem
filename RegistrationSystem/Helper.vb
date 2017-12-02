@@ -2,7 +2,7 @@
 
 Public Class Helper
     Public Shared error_message As String = ""
-    Public Shared max_credit_number As Integer = 15
+    Public Shared max_credit_number As Integer = 18
     'An "schedule problem" happens if a class is at the same time, the same days
     Public Shared Function check_scheduleproblem(_class As Class_Object, string_id As String,
                                                  strings_for_panels As List(Of String), _list As List(Of Class_Object)) _

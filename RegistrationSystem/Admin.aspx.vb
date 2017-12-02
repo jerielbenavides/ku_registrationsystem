@@ -20,7 +20,6 @@ Public Class Contact
         Else
             Response.Redirect("~/Login.aspx")
         End If
-
     End Sub
 
     Protected Sub AddStudent_bttn_OnClick(sender As Object, e As EventArgs)
@@ -99,4 +98,51 @@ Public Class Contact
                                       Alert_.BootstrapAlertType.Success, True)
         mcon.Close()
     End Sub
+
+    Protected Sub DeleteStudent_OnClickStudent_bttn_OnClick(sender As Object, e As EventArgs)
+        Dim major As String = ""
+        Dim id_ As String = ""
+        Try
+            If (Not String.IsNullOrWhiteSpace(id_tb0.Text)) AndAlso (Not String.IsNullOrWhiteSpace(username_tb0.Text)) Then
+                mcon.Open()
+                action = "select * from " & credentials_table & " where id='" + id_tb0.Text & "' && username='" + username_tb0.Text & "';"
+                mcd = New MySqlCommand(action, mcon)
+                mdr = mcd.ExecuteReader()
+                If mdr.Read() Then
+                    major = mdr("major").ToString()
+                    id_ = mdr("id").ToString()
+                    mcon.Close()
+                    mcon.Open()
+                    Dim Query As String = "delete from " & credentials_table & " where id='" + id_ & "' && username='" + username_tb0.Text & "';"
+                    Dim mcd3 As MySqlCommand = New MySqlCommand(Query, mcon)
+                    mdr = mcd3.ExecuteReader()
+                    mcon.Close()
+                    mcon.Open()
+                    Dim query2 As String = "DROP TABLE `courses_" & id_ & "_" & major & "`"
+                    Dim mcd4 As MySqlCommand = New MySqlCommand(query2, mcon)
+                    Dim MyReader2 As MySqlDataReader
+                    MyReader2 = mcd4.ExecuteReader()
+                    If MyReader2.Read() Then
+                        mcon.Close()
+                    Else
+                        mcon.Close()
+                    End If
+                    Alert_.BootstrapAlert(MessageLabel2, "Student Deleted",
+                                          Alert_.BootstrapAlertType.Success, True)
+                Else
+                    Alert_.BootstrapAlert(MessageLabel2, "Student Not Found",
+                                          Alert_.BootstrapAlertType.Success, True)
+                    mcon.Close()
+                End If
+            Else
+                Alert_.BootstrapAlert(MessageLabel2, "Please complete the required fields",
+                                      Alert_.BootstrapAlertType.Success, True)
+            End If
+        Catch ex As Exception
+            Alert_.BootstrapAlert(MessageLabel2, "Something went wrong" & ex.ToString(),
+                                  Alert_.BootstrapAlertType.Success, True)
+        End Try
+    End Sub
+
+
 End Class

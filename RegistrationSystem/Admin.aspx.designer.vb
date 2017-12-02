@@ -32,6 +32,24 @@ Partial Public Class Contact
     Protected WithEvents MessageLabel As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''DeleteStudent control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents DeleteStudent As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''MessageLabel2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents MessageLabel2 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
     '''ID_lb control.
     '''</summary>
     '''<remarks>
@@ -59,6 +77,33 @@ Partial Public Class Contact
     Protected WithEvents id_tb_FilteredTextBoxExtender As Global.AjaxControlToolkit.FilteredTextBoxExtender
     
     '''<summary>
+    '''ID_lb2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ID_lb2 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''id_tb0 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents id_tb0 As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''id_tb0_FilteredTextBoxExtender control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents id_tb0_FilteredTextBoxExtender As Global.AjaxControlToolkit.FilteredTextBoxExtender
+    
+    '''<summary>
     '''Username_lb control.
     '''</summary>
     '''<remarks>
@@ -77,6 +122,24 @@ Partial Public Class Contact
     Protected WithEvents username_tb As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
+    '''Username_lb2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Username_lb2 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''username_tb0 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents username_tb0 As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
     '''First_lb control.
     '''</summary>
     '''<remarks>
@@ -93,6 +156,15 @@ Partial Public Class Contact
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents first_tb As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''DeleteStudent_bttn control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents DeleteStudent_bttn As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''Middle_lb control.
