@@ -46,9 +46,9 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:RegistrationSystem.Contact._AddStudent">
+<member name="F:RegistrationSystem.Contact._AddStudent_Label">
 <summary>
-AddStudent control.
+AddStudent_Label control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -64,18 +64,18 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:RegistrationSystem.Contact._DeleteStudent">
+<member name="F:RegistrationSystem.Contact._DeleteStudent_Label">
 <summary>
-DeleteStudent control.
+DeleteStudent_Label control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:RegistrationSystem.Contact._MessageLabel2">
+<member name="F:RegistrationSystem.Contact._DisplayTables_lb">
 <summary>
-MessageLabel2 control.
+DisplayTables_lb control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -136,6 +136,24 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:RegistrationSystem.Contact._ID_lb3">
+<summary>
+ID_lb3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._TableComboBox">
+<summary>
+TableComboBox control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:RegistrationSystem.Contact._Username_lb">
 <summary>
 Username_lb control.
@@ -172,6 +190,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:RegistrationSystem.Contact._PlaceHolder2">
+<summary>
+PlaceHolder2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:RegistrationSystem.Contact._First_lb">
 <summary>
 First_lb control.
@@ -193,6 +220,15 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:RegistrationSystem.Contact._DeleteStudent_bttn">
 <summary>
 DeleteStudent_bttn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._Print_bttn">
+<summary>
+Print_bttn control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -274,6 +310,24 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:RegistrationSystem.Contact._FilteredTextBoxExtender2">
 <summary>
 FilteredTextBoxExtender2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._MessageLabel2">
+<summary>
+MessageLabel2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:RegistrationSystem.Contact._MessageLabel3">
+<summary>
+MessageLabel3 control.
 </summary>
 <remarks>
 Auto-generated field.

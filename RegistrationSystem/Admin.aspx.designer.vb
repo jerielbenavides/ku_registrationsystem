@@ -14,13 +14,13 @@ Option Explicit On
 Partial Public Class Contact
     
     '''<summary>
-    '''AddStudent control.
+    '''AddStudent_Label control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents AddStudent As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents AddStudent_Label As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''MessageLabel control.
@@ -32,22 +32,22 @@ Partial Public Class Contact
     Protected WithEvents MessageLabel As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''DeleteStudent control.
+    '''DeleteStudent_Label control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents DeleteStudent As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents DeleteStudent_Label As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''MessageLabel2 control.
+    '''DisplayTables_lb control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents MessageLabel2 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents DisplayTables_lb As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''ID_lb control.
@@ -104,6 +104,24 @@ Partial Public Class Contact
     Protected WithEvents id_tb0_FilteredTextBoxExtender As Global.AjaxControlToolkit.FilteredTextBoxExtender
     
     '''<summary>
+    '''ID_lb3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ID_lb3 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''TableComboBox control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents TableComboBox As Global.AjaxControlToolkit.ComboBox
+    
+    '''<summary>
     '''Username_lb control.
     '''</summary>
     '''<remarks>
@@ -140,6 +158,15 @@ Partial Public Class Contact
     Protected WithEvents username_tb0 As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
+    '''PlaceHolder2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents PlaceHolder2 As Global.System.Web.UI.WebControls.PlaceHolder
+    
+    '''<summary>
     '''First_lb control.
     '''</summary>
     '''<remarks>
@@ -165,6 +192,15 @@ Partial Public Class Contact
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents DeleteStudent_bttn As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''Print_bttn control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Print_bttn As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''Middle_lb control.
@@ -246,6 +282,24 @@ Partial Public Class Contact
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents FilteredTextBoxExtender2 As Global.AjaxControlToolkit.FilteredTextBoxExtender
+    
+    '''<summary>
+    '''MessageLabel2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents MessageLabel2 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''MessageLabel3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents MessageLabel3 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''country_lb control.

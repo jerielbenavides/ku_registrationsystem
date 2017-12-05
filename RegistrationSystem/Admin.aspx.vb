@@ -1,4 +1,8 @@
 ﻿Imports System.Diagnostics.Eventing.Reader
+Imports System.IO
+Imports iTextSharp.text
+Imports iTextSharp.text.html.simpleparser
+Imports iTextSharp.text.pdf
 Imports MySql.Data.MySqlClient
 
 Public Class Contact
@@ -12,6 +16,7 @@ Public Class Contact
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
         If Session("isAdmin") = True Then
             Try
+                setvisibility()
                 mcon = New MySqlConnection("Datasource=localhost;Database=student_database;user=root;")
             Catch x As Exception
                 ScriptManager.RegisterClientScriptBlock(Me, Me.GetType(), "alertMessage", "alert('Something went wrong with the connection')", True)
@@ -20,6 +25,10 @@ Public Class Contact
         Else
             Response.Redirect("~/Login.aspx")
         End If
+    End Sub
+
+    Private Sub setvisibility()
+
     End Sub
 
     Protected Sub AddStudent_bttn_OnClick(sender As Object, e As EventArgs)
@@ -145,4 +154,127 @@ Public Class Contact
     End Sub
 
 
+    Protected Sub Print_bttn_OnClick(sender As Object, e As EventArgs) Handles Print_bttn.Click
+        If TableComboBox.SelectedItem Is Nothing Then
+            Alert_.BootstrapAlert(MessageLabel3, "Please choose a table",
+                                  Alert_.BootstrapAlertType.Success, True)
+        Else
+            Dim dtable As New Data.DataTable("table_courses")
+            dtable = getDataTable(TableComboBox.SelectedValue)
+            'Building an HTML string.
+            Dim html As New StringBuilder()
+
+            'Table start.
+            html.Append("<table border = '1'>")
+
+            'Building the Header row.
+            html.Append("<tr>")
+            For Each column As DataColumn In dtable.Columns
+                html.Append("<th>")
+                html.Append(column.ColumnName)
+                html.Append("</th>")
+            Next
+            html.Append("</tr>")
+
+            'Building the Data rows.
+            For Each row As DataRow In dtable.Rows
+                html.Append("<tr>")
+                For Each column As DataColumn In dtable.Columns
+                    html.Append("<td>")
+                    html.Append(row(column.ColumnName))
+                    html.Append("</td>")
+                Next
+                html.Append("</tr>")
+            Next
+
+            'Table end.
+            html.Append("</table>")
+
+            'Append the HTML string to Placeholder.
+            Dim header_string As String = "<div id='Table_div' align='center'> <p> Keiser University </p> <p>" & TableComboBox.SelectedItem.ToString() & "</p> <br> </div>"
+            PlaceHolder2.Controls.Add(New Literal() With {
+                                         .Text = header_string.ToString()
+                                         })
+            PlaceHolder2.Controls.Add(New Literal() With {
+                                         .Text = html.ToString()
+                                         })
+            PlaceHolder2.Visible = True
+            Print_PDF()
+            PlaceHolder2.Visible = False
+        End If
+    End Sub
+
+    Private Function getDataTable(selectedValue As String) As DataTable
+        Dim mcon As New MySqlConnection("Datasource=localhost;Database=student_database;user=root;")
+        Dim Query As String = "select * from " + selectedValue + ";"
+        mcon.Open()
+        Dim mcd As New MySqlCommand(Query, mcon)
+        Dim MyAdapter As New MySqlDataAdapter()
+        MyAdapter.SelectCommand = mcd
+        Dim dTable As New DataTable()
+        MyAdapter.Fill(dTable)
+        Return dTable
+    End Function
+
+    Private Sub Print_PDF()
+        Response.ContentType = "application/pdf"
+        Response.AddHeader("content-disposition", "attachment;filename=" & Session("Username") & " Schedule.pdf")
+        Response.Cache.SetCacheability(HttpCacheability.NoCache)
+        Dim sw As New StringWriter()
+        Dim hw As New HtmlTextWriter(sw)
+        PlaceHolder2.RenderControl(hw)
+        Dim sr As New StringReader(sw.ToString())
+        Dim pdfDoc As New iTextSharp.text.Document(PageSize.A4.Rotate(), 10.0F, 10.0F, 100.0F, 0.0F)
+        Dim htmlparser As New HTMLWorker(pdfDoc)
+        PdfWriter.GetInstance(pdfDoc, Response.OutputStream)
+        pdfDoc.Open()
+        htmlparser.Parse(sr)
+        pdfDoc.Close()
+        Response.Write(pdfDoc)
+        Response.End()
+    End Sub
+
+    Protected Sub AddStudent_Label_OnClick(sender As Object, e As EventArgs)
+        ID_lb.Visible = Not ID_lb.Visible
+        id_tb.Visible = Not id_tb.Visible
+        username_tb.Visible = Not username_tb.Visible
+        Username_lb.Visible = Not Username_lb.Visible
+        First_lb.Visible = Not First_lb.Visible
+        first_tb.Visible = Not first_tb.Visible
+        Middle_lb.Visible = Not Middle_lb.Visible
+        middle_tb.Visible = Not middle_tb.Visible
+        Last_lb.Visible = Not Last_lb.Visible
+        last_tb.Visible = Not last_tb.Visible
+        Address_lb.Visible = Not Address_lb.Visible
+        address_tb.Visible = Not address_tb.Visible
+        Phone_lb.Visible = Not Phone_lb.Visible
+        phone_tb.Visible = Not phone_tb.Visible
+        country_lb.Visible = Not country_lb.Visible
+        country_tb.Visible = Not country_tb.Visible
+        City_lb.Visible = Not City_lb.Visible
+        city_tb.Visible = Not city_tb.Visible
+        State_lb.Visible = Not State_lb.Visible
+        state_tb.Visible = Not state_tb.Visible
+        ZIP_lb.Visible = Not ZIP_lb.Visible
+        ZIP_tb.Visible = Not ZIP_tb.Visible
+        BD_lb.Visible = Not BD_lb.Visible
+        BirthDate_tb.Visible = Not BirthDate_tb.Visible
+        Major_lb.Visible = Not Major_lb.Visible
+        major_tb.Visible = Not major_tb.Visible
+        AddStudent_bttn.Visible = Not AddStudent_bttn.Visible
+    End Sub
+
+    Protected Sub DeleteStudent_Label_OnClick(sender As Object, e As EventArgs)
+        ID_lb2.Visible = Not ID_lb2.Visible
+        id_tb0.Visible = Not id_tb0.Visible
+        username_tb0.Visible = Not username_tb0.Visible
+        Username_lb2.Visible = Not Username_lb2.Visible
+        DeleteStudent_bttn.Visible = Not DeleteStudent_bttn.Visible
+    End Sub
+
+    Protected Sub DisplayTables_lb_OnClick(sender As Object, e As EventArgs)
+        ID_lb3.Visible = Not ID_lb3.Visible
+        TableComboBox.Visible = Not TableComboBox.Visible
+        Print_bttn.Visible = Not Print_bttn.Visible
+    End Sub
 End Class
