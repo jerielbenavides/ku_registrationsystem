@@ -55,10 +55,10 @@
                         <a runat="server" id="master_username"></a>
                     </li>
                     <li>
-                        <a runat="server" href="~/">Home</a>
+                        <a id="HomeMaster" runat="server" href="~/">Home</a>
                     </li>
                     <li>
-                        <a runat="server" href="~/Admin.aspx">Admin</a>
+                        <a id="AdminMaster" runat="server" href="~/Admin.aspx">Admin</a>
                     </li>
                     <li>
                         <a runat="server" href="~/About.aspx">About</a>

@@ -23,6 +23,24 @@ Partial Public Class SiteMaster
     Protected WithEvents master_username As Global.System.Web.UI.HtmlControls.HtmlAnchor
     
     '''<summary>
+    '''HomeMaster control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents HomeMaster As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
+    '''AdminMaster control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents AdminMaster As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
     '''MainContent control.
     '''</summary>
     '''<remarks>

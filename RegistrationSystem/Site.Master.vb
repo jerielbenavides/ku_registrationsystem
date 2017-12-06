@@ -8,7 +8,13 @@ Public Class SiteMaster
         master_username.InnerText = "Welcome " & Session("fullname")
         FooterLabel.ForeColor = Color.White
         FooterLabel.Text = DateTime.Now.Year & " - KULAC Registration System"
+        If Session("isAdmin") = True Then
+            HomeMaster.Visible = False
+        Else
+            AdminMaster.Visible = False
+        End If
     End Sub
+
 
     Protected Sub LogoutClick(sender As Object, e As EventArgs)
         Try
